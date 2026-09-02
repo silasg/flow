@@ -14,3 +14,9 @@ Follow these conventions:
 - `design.md` contains the change's design and key decisions.
 - `tasks/` contains task files for implementing the change.
 - Add any other files and folders useful for the change, such as `prototype/`. Choose their structure based on the work.
+
+Changes and tasks are temporary:
+
+- Do not update tasks after completion.
+- Do not update `design.md` after completion.
+- Do not search past change folders unless you are explicitly looking for historical information.
