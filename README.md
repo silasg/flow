@@ -8,6 +8,15 @@ I couldn't find the right workflow for me, so I built my own. The focus areas ar
 - **Readability**: Each skill should be small and easy to read. I wrote most of them by hand and only used LLMs to tweak them. If you cannot understand the main skills in your workflow, you are losing control.
 - **Customizability**: The skills are focused and relatively unopinionated. I encourage you to change them and make them your own instead of blindly accepting my design choices.
 
+## Installation
+The easiest way is to run:
+```sh
+npx skills add tobias-walle/flow
+```
+
+Alternatively, you can just copy the [./skills/](./skills/) folder from this repo into the `.agents/skills` or `.claude/skills` folder in your project or home folder.
+
+## Motivation
 A lot of popular skills are extremely verbose and overengineered. This happens naturally if you rely too much on LLMs without guiding them.
 I believe you must push against this trend to keep quality high. This workflow is my attempt to do this.
 
@@ -41,18 +50,6 @@ Let's walk through an example:
 9. `/implement-tasks Implement all tasks of oauth-support using subagents. Commit between each task.` <- You decide how you want to implement the tasks.
 
 Basically, each phase is optional. Directly implement after `/brainstorm`? Your choice. You only want to use `/create-design` but not `/create-tasks` or `/implement-tasks`? Fine with me.
-
-## Installation
-The easiest way is to run:
-```sh
-npx skills add tobias-walle/flow
-```
-
-Alternatively you can just use git if you prefer:
-```sh
-tmp_dir="$(mktemp -d)" && git clone --depth 1 --filter=blob:none --sparse https://github.com/tobias-walle/flow.git "$tmp_dir" && git -C "$tmp_dir" sparse-checkout set skills && mkdir -p .agents/skills && cp -R "$tmp_dir"/skills/. .agents/skills/ && rm -rf "$tmp_dir"
-```
-
 
 ## Inspiration
 As I follow the space quite closely, I have mostly combined existing ideas. The main inspirations were:
