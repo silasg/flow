@@ -20,7 +20,9 @@ Match the format to the information:
 - Use a call tree for runtime control flow.
 - Use a component tree for user-interface structure and relevant boundaries.
 - Use a shallow file tree for file responsibilities or a broad refactor.
-- Use Mermaid for interactions, control flow, data flow, or state transitions.
+- Use a diagram for interactions, control flow, data flow, or state transitions.
+- Use Mermaid only in Markdown documents or chats with non-CLI clients that render it.
+- In chats with CLI clients, prefer ASCII diagrams that render directly in the terminal.
 - Use a diff when the existing and proposed shapes are the main point.
 - Use a complete code block when most of the content is new or must be copied.
 
@@ -82,7 +84,7 @@ src/
     └── api-client.ts        # sends API requests
 ```
 
-Show interactions with Mermaid:
+Show interactions with Mermaid in a Markdown document or a non-CLI client:
 
 ```mermaid
 sequenceDiagram
@@ -92,6 +94,19 @@ sequenceDiagram
     User->>UI: Submit form
     UI->>API: Create session
     API-->>UI: Return session
+```
+
+Show the same interaction as ASCII in a CLI chat:
+
+```text
+User          UI            API
+  |            |             |
+  | submit     |             |
+  |----------->|             |
+  |            | create      |
+  |            |------------>|
+  |            | session     |
+  |            |<------------|
 ```
 
 Show a change as a structural diff:
