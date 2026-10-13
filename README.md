@@ -1,7 +1,7 @@
 # Flow
 Flow is a flexible, skill-based workflow for brainstorming, design, task planning, and implementation.
 
-This fork is based on [Tobias Walle's original Flow](https://github.com/tobias-walle/flow). Many thanks to Tobias for creating the workflow and publishing it. The original version is intentionally small and unopinionated; install it from `tobias-walle/flow` if you prefer that approach.
+This fork is based on [Tobias' original Flow](https://github.com/tobias-walle/flow). Many thanks to Tobias for creating the workflow and publishing it. The original version is intentionally small and unopinionated; install it from `tobias-walle/flow` if you prefer that approach.
 
 This fork keeps Flow's modular structure while adding:
 
